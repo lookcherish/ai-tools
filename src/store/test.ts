@@ -1,5 +1,21 @@
 export default defineStore({
   id: 'test',
+  state: () => {
+    return {
+      name: '张三',
+      token: 'token...',
+    }
+  },
+  getters: {
+    fullName: (state) => {
+      return `${state.name}丰`
+    },
+  },
+  actions: {
+    updateName(name: any) {
+      this.name = name
+    },
+  },
   persist: {
     // 开启持久化
     enabled: true,
@@ -7,24 +23,8 @@ export default defineStore({
     strategies: [
       {
         key: 'test',
-        storage: window?.sessionStorage
-      }
-    ]
+        storage: window?.sessionStorage,
+      },
+    ],
   },
-  state: () => {
-    return {
-      name: '张三',
-      token: 'token...'
-    };
-  },
-  getters: {
-    fullName: (state) => {
-      return `${state.name}丰`;
-    }
-  },
-  actions: {
-    updateName(name: any) {
-      this.name = name;
-    }
-  }
-});
+})

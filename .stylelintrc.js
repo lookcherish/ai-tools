@@ -25,26 +25,14 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: [
-          'content',
-          'each',
-          'error',
-          'extend',
-          'for',
-          'function',
-          'if',
-          'else',
-          'include',
-          'mixin',
-          'return',
-          'while',
-        ],
+        ignoreAtRules: ['content', 'each', 'error', 'extend', 'for', 'function', 'if', 'else', 'include', 'mixin', 'return', 'while'],
       },
     ],
     'selector-type-no-unknown': [true, { ignoreTypes: ['page', 'radio', 'checkbox'] }],
     'number-leading-zero': 'always',
     'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
     'declaration-block-no-redundant-longhand-properties': null,
+    'declaration-block-trailing-semicolon': null, //避免和prettier冲突，去除style样式末尾的分号
     'color-function-notation': 'legacy',
     'color-hex-case': 'lower',
     'comment-empty-line-before': 'never',

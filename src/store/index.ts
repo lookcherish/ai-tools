@@ -1,6 +1,6 @@
-import piniaPluginPersist from 'pinia-plugin-persist-uni';
+import piniaPluginPersist from 'pinia-plugin-persist-uni'
+// import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+const store = createPinia()
+store.use(piniaPluginPersist)
 
-const store = createPinia();
-store.use(piniaPluginPersist);
-
-export default store;
+export default store

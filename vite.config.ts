@@ -11,52 +11,52 @@ import env from './src/config/env'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    resolve: {
-        alias: {
-            '@': resolve(__dirname, './src'),
-        },
-        extensions: ['.mjs', '.js', '.jsx', '.json', '.vue'],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
     },
-    plugins: [
-        PiniaAutoRefs({
-            storeDir: 'src/store',
-        }),
-        AutoImport({
-            dts: 'src/auto-imports.d.ts',
-            imports: [
-                'vue',
-                'uni-app',
-                'pinia',
-                {
-                    '@/helper/pinia-auto-refs': ['useStore'],
-                },
-            ],
-            exclude: ['createApp'],
-            eslintrc: {
-                enabled: true,
-            },
-        }),
-        // Components({
-        //     extensions: ['vue'],
-        //     dts: 'src/components.d.ts',
-        // }),
-        Unocss({
-            mode: 'vue-scoped',
-        }),
-        uni(),
-        AutoImportTypes(),
-    ],
-    server: {
-        open: true, // 自动打开
-        base: './ ', // 生产环境路径
-        proxy: {
-            // 本地开发环境通过代理实现跨域，生产环境使用 nginx 转发
-            // 正则表达式写法
-            '^/api': {
-                target: env.apiBaseUrl, // 后端服务实际地址
-                changeOrigin: true, // 开启代理
-                rewrite: (path) => path.replace(/^\/api/, ''),
-            },
+    extensions: ['.mjs', '.js', '.jsx', '.json', '.vue'],
+  },
+  plugins: [
+    PiniaAutoRefs({
+      storeDir: 'src/store',
+    }),
+    AutoImport({
+      dts: 'src/auto-imports.d.ts',
+      imports: [
+        'vue',
+        'uni-app',
+        'pinia',
+        {
+          '@/helper/pinia-auto-refs': ['useStore'],
         },
+      ],
+      exclude: ['createApp'],
+      eslintrc: {
+        enabled: true,
+      },
+    }),
+    // Components({
+    //     extensions: ['vue'],
+    //     dts: 'src/components.d.ts',
+    // }),
+    Unocss({
+      mode: 'vue-scoped',
+    }),
+    uni(),
+    AutoImportTypes(),
+  ],
+  server: {
+    open: true, // 自动打开
+    base: './ ', // 生产环境路径
+    proxy: {
+      // 本地开发环境通过代理实现跨域，生产环境使用 nginx 转发
+      // 正则表达式写法
+      '^/api': {
+        target: env.apiBaseUrl, // 后端服务实际地址
+        changeOrigin: true, // 开启代理
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
     },
+  },
 })

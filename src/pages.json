@@ -1,74 +1,101 @@
 {
-    "easycom": {
-        "autoscan": true,
-        "custom": {
-            "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
-        }
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "name": "home",
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "backgroundColor": "#f5f6f8"
+      }
     },
-    "pages": [
+    {
+      "name": "mine",
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "name": "index",
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "name": "profile",
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "个人"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/test",
+      "pages": [
         {
-            "name": "index",
-            "path": "pages/index/index",
-            "style": {
-                "navigationBarTitleText": "首页"
-            }
+          "name": "test",
+          "path": "test",
+          "style": {
+            "navigationBarTitleText": "测试"
+          }
         },
         {
-            "name": "profile",
-            "path": "pages/profile/profile",
-            "style": {
-                "navigationBarTitleText": "个人"
-            }
-        }
-    ],
-    "subPackages": [
+          "name": "index2",
+          "path": "index2",
+          "style": {
+            "navigationBarTitleText": "index测试"
+          }
+        },
         {
-            "root": "pages/test",
-            "pages": [
-                {
-                    "name": "test",
-                    "path": "test",
-                    "style": {
-                        "navigationBarTitleText": "测试"
-                    }
-                },
-                {
-                    "name": "index2",
-                    "path": "index2",
-                    "style": {
-                        "navigationBarTitleText": "index测试"
-                    }
-                },
-                {
-                    "name": "mine",
-                    "path": "mine",
-                    "style": {
-                        "navigationBarTitleText": "mine测试"
-                    }
-                }
-            ]
+          "name": "mine",
+          "path": "mine",
+          "style": {
+            "navigationBarTitleText": "mine测试"
+          }
         }
-    ],
-    "globalStyle": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "uni-app",
-        "navigationBarBackgroundColor": "#1AA86C",
-        "backgroundColor": "#F8F8F8"
+      ]
     },
-    "tabBar": {
-        "color": "#1AA86C",
-        "selectedColor": "#1AA86C",
-        "borderStyle": "white",
-        "backgroundColor": "#ffffff",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "首页"
-            },
-            {
-                "pagePath": "pages/profile/profile",
-                "text": "个人"
-            }
-        ]
+    {
+      "root": "pages/detail",
+      "pages": [
+        {
+          "name": "detail",
+          "path": "detail",
+          "style": {
+            "navigationBarTitleText": ""
+          }
+        }
+      ]
     }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#3e85ee",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
+  }
 }

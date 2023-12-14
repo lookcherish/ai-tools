@@ -15,7 +15,20 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+  import { useTitle } from '@/hooks/useTitle'
+  import { useInit } from '@/hooks/useInit'
+
+  const titleName = ref('')
+  const { title, changeNavBarTitle } = useTitle()
+  console.log('title: ', title.value)
+  onLoad(() => {
+    const { pageName, pagePath, pageQuery } = useInit()
+    console.log('pageQuery', pageQuery?.name)
+    titleName.value = pageQuery?.name ?? ''
+    changeNavBarTitle(titleName.value)
+    console.log(pageName, pagePath, pageQuery, 'pageName,pagePath, pageQuery')
+  })
   // 使用了自动导入
   const userStore = useStore('user')
   const confirm = () => {
@@ -30,4 +43,4 @@
     })
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped lang="scss"></style>
