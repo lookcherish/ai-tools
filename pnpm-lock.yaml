@@ -83,6 +83,9 @@ dependencies:
   vue-tsc:
     specifier: ^1.8.22
     version: 1.8.22(typescript@5.3.2)
+  wot-design-uni:
+    specifier: ^0.1.69
+    version: 0.1.69(vue@3.2.47)
   z-paging:
     specifier: ^2.5.8
     version: 2.5.8
@@ -10422,6 +10425,15 @@ packages:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /wot-design-uni@0.1.69(vue@3.2.47):
+    resolution: {integrity: sha512-ZKUDpLkrCZvW89u9vYUrZ9DBNhdP199N0atEGWoDCZIJ/CNAm0OQ9ZTyWnh8TT3zPoLanW9wiQ/D8YJOS9kLRw==}
+    engines: {HBuilderX: ^3.8.7}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.47
+    dev: false
 
   /wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}

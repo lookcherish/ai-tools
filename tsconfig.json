@@ -17,7 +17,7 @@
     },
 
     "lib": ["esnext", "dom"],
-    "types": ["@uni-helper/uni-ui-types", "pinia-plugin-persist-uni", "@dcloudio/types", "miniprogram-api-typings", "@ttou/uview-typings/v3", "@ttou/uview-typings/refs"]
+    "types": ["wot-design-uni/global.d.ts", "@uni-helper/uni-ui-types", "pinia-plugin-persist-uni", "@dcloudio/types", "miniprogram-api-typings", "@ttou/uview-typings/v3", "@ttou/uview-typings/refs"]
   },
   "exclude": ["node_modules", "dist"],
   "include": ["src/*.vue", "src/**/*.vue", "src/**/**/*.vue", "src/**/**/**/*.vue", "src/**/*.js", "src/**/**/*.js", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./auto-imports.d.ts"]

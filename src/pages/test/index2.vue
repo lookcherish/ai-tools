@@ -11,6 +11,11 @@
       <div class="flex-content-center flex justify-center">
         <uni-icons type="wallet" color="#bfa" size="24" />
       </div>
+      <wd-button size="" :loading="true">主要按钮</wd-button>
+      <wd-button type="success">成功按钮</wd-button>
+      <wd-button type="info">信息按钮</wd-button>
+      <wd-button type="warning">警告按钮</wd-button>
+      <wd-button type="error">危险按钮</wd-button>
     </div>
   </div>
 </template>
