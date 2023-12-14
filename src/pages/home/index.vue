@@ -49,7 +49,8 @@
         </div>
       </div>
       <div class="ft pa-60 text-center" style="font-size: 25rpx; color: #333">
-        <text>我也是有底线的</text>
+        <!-- <text>我也是有底线的</text> -->
+        <u-divider text="我也是有底线的" :dashed="true"></u-divider>
       </div>
     </div>
   </div>
